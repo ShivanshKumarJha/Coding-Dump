@@ -1,0 +1,5 @@
+MaxLength : 2 | Substring : si
+MaxLength : 1 | Substring : a
+MaxLength : 3 | Substring : ana
+MaxLength : 1 | Substring : o
+MaxLength : 0 | Substring : 
