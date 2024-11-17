@@ -30,6 +30,6 @@ int main()
     Base *ptr;
     ptr = new Derived();
     // ptr->fun1();
-    ptr->fun2(); // Error
+    // ptr->fun2(); // Error
     return 0;
 }
