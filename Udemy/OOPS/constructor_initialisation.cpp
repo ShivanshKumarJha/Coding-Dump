@@ -24,7 +24,7 @@ Player::Player(string name_val)
         cout<<"One-arg constructor"<<endl;
     }
 
-Player::Player(string name_val,int health,int xp)
+Player::Player(string name_val,int health_val,int xp_val)
     :name{name_val},health{health_val},xp{xp_val}{  
         cout<<"Three-args constructor"<<endl;
     }

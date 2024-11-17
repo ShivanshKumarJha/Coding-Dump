@@ -10,8 +10,8 @@ print(l)                    #10 20 30 40 50 30
 l.insert(1,15)              #insert 15 at index 1
 print(l)                    #10 15 20 30 40 50 30   
 print(15 in l)              #True - whether present or not
-print(l.count(30))          #2- Number of occurences
-print(l.index(30))          #3 - First occurence index if exists otherwise will throw error
+print(l.count(30))          #2- Number of occurrences
+print(l.index(30))          #3 - First occurrence index if exists otherwise will throw error
 
 # element, start index(inclusive), end index(exclusive) 
 print(l.index(30,4,7))
