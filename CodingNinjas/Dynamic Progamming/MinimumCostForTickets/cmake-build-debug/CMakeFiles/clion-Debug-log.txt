@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\Shivansh\Coding\CodingNinjas\Dynamic Progamming\MinimumCostForTickets Select CMakeLists.txt
