@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03ba1fc0-15be-4363-bb00-77f7f430ae0b" name="Changes" comment="Learned more about functions and strings">
+    <list default="true" id="03ba1fc0-15be-4363-bb00-77f7f430ae0b" name="Changes" comment="Learned more about strings">
       <change beforePath="$PROJECT_DIR$/../JavaScript/GuessMyNumber" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaScript/GuessMyNumber" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Strings/formattedStrings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strings/formattedStrings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VariablesAndDataTypes/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/VariablesAndDataTypes/list.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,10 +60,12 @@
     "Python.StringOperations.executor": "Run",
     "Python.VariableLengthArguments.executor": "Run",
     "Python.arithmetic.executor": "Run",
+    "Python.binaryTodecimal.executor": "Run",
     "Python.break.executor": "Run",
     "Python.checkForPrime.executor": "Run",
     "Python.continue.executor": "Run",
     "Python.countDigits.executor": "Run",
+    "Python.decTobinary.executor": "Run",
     "Python.dict.executor": "Run",
     "Python.escapeSequences.executor": "Run",
     "Python.factorial.executor": "Run",
@@ -132,7 +132,7 @@
       <workItem from="1731806175258" duration="186000" />
       <workItem from="1731907948077" duration="9744000" />
       <workItem from="1734292511715" duration="2509000" />
-      <workItem from="1734353158517" duration="7289000" />
+      <workItem from="1734353158517" duration="7749000" />
     </task>
     <task id="LOCAL-00001" summary="Practising the Loops">
       <option name="closed" value="true" />
@@ -158,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734354762173</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Learned more about strings">
+      <option name="closed" value="true" />
+      <created>1734368664511</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734368664511</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +175,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Practising the Loops" />
     <MESSAGE value="Learned more about functions and strings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Learned more about functions and strings" />
+    <MESSAGE value="Learned more about strings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Learned more about strings" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python$triangle.coverage" NAME="triangle Coverage Results" MODIFIED="1731909668087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Loops" />
@@ -175,8 +184,9 @@
     <SUITE FILE_PATH="coverage/Python$LCM.coverage" NAME="LCM Coverage Results" MODIFIED="1731911972852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Loops" />
     <SUITE FILE_PATH="coverage/Python$pyramid.coverage" NAME="pyramid Coverage Results" MODIFIED="1731910048128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Loops" />
     <SUITE FILE_PATH="coverage/Python$set.coverage" NAME="set Coverage Results" MODIFIED="1730782964582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VariablesAndDataTypes" />
-    <SUITE FILE_PATH="coverage/Python$reverse.coverage" NAME="reverse Coverage Results" MODIFIED="1734368324437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Strings" />
+    <SUITE FILE_PATH="coverage/Python$reverse.coverage" NAME="reverse Coverage Results" MODIFIED="1734368382096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Strings" />
     <SUITE FILE_PATH="coverage/Python$fibonacci.coverage" NAME="fibonacci Coverage Results" MODIFIED="1731912114185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Loops" />
+    <SUITE FILE_PATH="coverage/Python$decTobinary.coverage" NAME="decTobinary Coverage Results" MODIFIED="1734368430986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Strings" />
     <SUITE FILE_PATH="coverage/Python$ReturningMultipleValues.coverage" NAME="ReturningMultipleValues Coverage Results" MODIFIED="1734293909430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Functions" />
     <SUITE FILE_PATH="coverage/Python$countDigits.coverage" NAME="countDigits Coverage Results" MODIFIED="1731910197425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Loops" />
     <SUITE FILE_PATH="coverage/Python$factorial.coverage" NAME="factorial Coverage Results" MODIFIED="1731910414766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Loops" />
@@ -184,6 +194,7 @@
     <SUITE FILE_PATH="coverage/Python$nestedLoops.coverage" NAME="nestedLoops Coverage Results" MODIFIED="1731909239001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Loops" />
     <SUITE FILE_PATH="coverage/Python$continue.coverage" NAME="continue Coverage Results" MODIFIED="1731908749386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Loops" />
     <SUITE FILE_PATH="coverage/Python$FirstDigit.coverage" NAME="FirstDigit Coverage Results" MODIFIED="1734294649776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Functions" />
+    <SUITE FILE_PATH="coverage/Python$binaryTodecimal.coverage" NAME="binaryTodecimal Coverage Results" MODIFIED="1734368557162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Strings" />
     <SUITE FILE_PATH="coverage/Python$palindrome.coverage" NAME="palindrome Coverage Results" MODIFIED="1734368254951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Strings" />
     <SUITE FILE_PATH="coverage/Python$GCD.coverage" NAME="GCD Coverage Results" MODIFIED="1731910686330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Loops" />
     <SUITE FILE_PATH="coverage/Python$VariableLengthArguments.coverage" NAME="VariableLengthArguments Coverage Results" MODIFIED="1734292922022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Functions" />
