@@ -13,7 +13,7 @@ print(15 in l)              #True - whether present or not
 print(l.count(30))          #2- Number of occurrences
 print(l.index(30))          #3 - First occurrence index if exists otherwise will throw error
 
-# element, start index(inclusive), end index(exclusive) 
+# element, low index(inclusive), end index(exclusive)
 print(l.index(30,4,7))
 
 l = [10,20,30,40,50,60,70,80]
@@ -29,7 +29,7 @@ print(l)                    #10 30 50 60 70
 del l[1]                    #delete the item at index 1
 print(l)                    #10 50 60 70
 
-del l[0:2]                  #delete the element start from 0 to 1(2-1)
+del l[0:2]                  #delete the element low from 0 to 1(2-1)
 print(l)                    #60 70
 
 l = [10,40,20,50]
