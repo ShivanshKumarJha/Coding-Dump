@@ -1,3 +1,0 @@
-C:/Shivansh/Coding/CodingNinjas/Graph Algorithms/KruskalsAlgorithm/cmake-build-debug/CMakeFiles/KruskalsAlgorithm.dir
-C:/Shivansh/Coding/CodingNinjas/Graph Algorithms/KruskalsAlgorithm/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Shivansh/Coding/CodingNinjas/Graph Algorithms/KruskalsAlgorithm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
