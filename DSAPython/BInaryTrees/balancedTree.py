@@ -1,3 +1,5 @@
+from BinaryTreeNode import BinaryTreeNode
+
 def height(root):
     if root is None: return 0
     return 1 + max(height(root.left),height(root.right))
@@ -26,7 +28,6 @@ def isBalanced2(root):
 
 
 if __name__ == '__main__':
-    from BinaryTreeNode import BinaryTreeNode
     root = BinaryTreeNode(1)
     root.left = BinaryTreeNode(2)
     root.right = BinaryTreeNode(3)
