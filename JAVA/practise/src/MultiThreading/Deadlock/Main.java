@@ -66,7 +66,7 @@ public class Main {
                     Lock acquired
                     Lock released*/
 
-        SharedResource resource = new SharedResource();
+        /*SharedResource resource = new SharedResource();
 
         System.out.println("Main thread started");
 
@@ -82,8 +82,26 @@ public class Main {
         try {
             th1.join();
         } catch (Exception _) {
-            
+
         }
+        System.out.println("Main thread is finishing its work");*/
+
+        // Daemon Thread
+        SharedResource resource = new SharedResource();
+
+        System.out.println("Main thread started");
+
+        Thread th1 = new Thread(() -> {
+            System.out.println("Thread1 calling produce method");
+            try {
+                resource.produce();
+            } catch (Exception _) {
+            }
+        });
+
+        th1.setDaemon(true);
+        th1.start();
+
         System.out.println("Main thread is finishing its work");
     }
 }
