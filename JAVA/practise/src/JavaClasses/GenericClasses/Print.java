@@ -1,4 +1,4 @@
-package JavaClasses;
+package JavaClasses.GenericClasses;
 
 public class Print<T> {
     T value;

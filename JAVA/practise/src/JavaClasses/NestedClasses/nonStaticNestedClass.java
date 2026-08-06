@@ -1,4 +1,4 @@
-package JavaClasses;
+package JavaClasses.NestedClasses;
 
 class OuterClassV2{
     int instanceVariable = 10;

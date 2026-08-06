@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If an interface contains only 1 abstract method, this is known as a functional interface.
+Functional interfaces can be implemented using lambda expressions, which provide a clear and concise way to represent instances of single-method interfaces.
+Also known as SAM Interface (Single Abstract Method)
+
+@FunctionalInterface
+public interface Bird{
+    void canFly(String val);
+}
+
+This is equivalent to below one:
+public interface Bird{
+    void canFly(String val);
+}
+
+Example 2:
+@FunctionalInterface
+public interface Bird{
+    void canFly(String val);
+
+    default void getHeight(){
+
+    }
+
+    static void canEat(){
+
+    }
+
+    String toString();
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Lambda Expression:
+It is a way to implement the functional interface.
+Different ways to implement the functional interface using lambda expression:
+    Using implements
+    Using anonymous class
+    Using Lambda expression
+
+Using lambda expression
+@FunctionalInterface
+public interface Bird{
+    void canFly(String val);
+}
+
+public class Main{
+    public static void main(String[] args){
+        Bird bird = (val) -> System.out.println("Bird can fly with speed: " + val);
+        bird.canFly("50 km/h");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Types of Functional Interface:
+
+1. Consumer
+    Represent an operation, that accept a single input argument and returns no result.
+    Present in package: java.util.function
+
+2. Supplier
+    Represent an operation, that takes no input argument and returns a result.
+    Present in package: java.util.function
+
+3. Function
+    Represent an operation, that takes a single input argument and returns a result.
+    Present in package: java.util.function
+
+4. Predicate
+    Represent an operation, that takes a single input argument and returns a boolean result.
+    Present in package: java.util.function
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

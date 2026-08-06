@@ -1,0 +1,42 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Collection is nothing but a group of Objects.
+Present in java.util package
+Framework provide us the architecture to manage these "group of objects" in a more efficient way.
+
+Methods defined in Collection interface are:
+1. size()
+2. isEmpty()
+3. contains()
+4. toArray()
+5. add()
+6. remove()
+7. addAll()
+8. removeAll()
+9. clear()
+10. equals()
+11. stream() and parallelStream()
+12. iterator()
+
+
+List<Integer> values = new ArrayList<>();
+
+Difference between Collection and Collections:
+
+Collection is part of Java Collections Framework and is an interface. It is the root interface of the collection hierarchy. It represents a group of objects known as elements.
+Collections is a utility class that consists of static methods that operate on or return collections. It contains polymorphic algorithms that operate on collections, "wrappers",
+which return a new collection backed by a specified collection, and a few other odds and ends. It is present in java.util package.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Methods defined in Collections are:
+1. sort()
+2. binarySearch()
+3. get()
+4. reverse()
+5. shuffle()
+6. swap()
+7. copy()
+8. min()
+9. max()
+10. rotate()
+11. unmodifiableCollection

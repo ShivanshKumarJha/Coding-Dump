@@ -1,0 +1,153 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Default Methods
+    Default methods are introduced in Java 8. It allows us to add new methods to interfaces without breaking the existing implementation of classes that implement the interface.
+    Default methods are defined using the default keyword.
+    Default methods can have a body and can be overridden by implementing classes.
+
+public interface Bird {
+    void fly();
+
+    default void hasBreak() {
+        System.out.println("Bird has break");
+    }
+}
+
+public class Eagle implements Bird {
+    @Override
+    public void fly() {
+        System.out.println("Eagle");
+    }
+
+    @Override
+    public void hasBreak() {
+        System.out.println("Eagle has break");
+    }
+}
+
+default and Implementation
+
+public Interface Bird {
+    void fly();
+
+    default void hasBreak() {
+        System.out.println("Bird has break");
+    }
+}
+
+public interface LivingThing{
+    default void hasBreak(){
+        System.out.println("Living thing has break");
+    }
+}
+
+// This is wrong
+public class Eagle implements Bird, LivingThing{
+
+}
+
+// This is right
+public class Eagle implements Bird, LivingThing{
+    @Override
+    public void fly(){
+        System.out.println("Eagle");
+    }
+
+    @Override
+    public void hasBreak(){
+        System.out.println("Eagle has break");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Extend the interface
+
+1. First Way -  Cascading
+public interface LivingThing {
+    default boolean eat(){
+        System.out.println("Living thing is eating");
+        return true;
+    }
+}
+
+public interface Bird extends LivingThing{
+
+}
+
+public class Eagle implements Bird{
+
+}
+
+
+2. Second Way
+public interface LivingThing {
+    default boolean eat(){
+        System.out.println("Living thing is eating");
+        return true;
+    }
+}
+
+public interface Bird extends LivingThing{
+    boolean eat();
+}
+
+public class Eagle implements Bird{
+    @Override
+    public boolean eat(){
+        System.out.println("Eagle is eating");
+        return true;
+    }
+}
+
+
+3. Third Way
+public interface LivingThing {
+    default boolean eat(){
+        return true;
+    }
+}
+
+public interface Bird extends LivingThing{
+    default boolean eat(){
+        boolean canEat = LivingThing.super.eat();
+        return canEat;
+    }
+}
+
+public class Eagle implements Bird{
+
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. static METHODS IN INTERFACES
+    Static methods are introduced in Java 8.
+    It allows us to add new static methods to interfaces without breaking the existing implementation of classes that implement the interface.
+    Static methods can be called using the interface name.
+    By default, it is public.
+
+public interface Bird {
+    static void canBreathe() {
+        System.out.println("Bird can breathe");
+    }
+}
+
+public class Eagle implements Bird {
+    public void digestiveSystemTestMethod() {
+        if (Bird.canBreathe())
+            System.out.println("Eagle can breathe");{
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Java 9 Features : Private Methods and Private Static Method
+    We can provide the implementation of method but as a private access modifier in interface.
+    It brings more readability of the code.
+    It can be defined as static or non-static.
+    From static method, we can call only private static interface method.
+    Private static method, can be called from both static and non-static methods of interface.
+    Private interface methods can not be abstract. Means we have to provide the definition.
+    It can be used inside the particular interface only.

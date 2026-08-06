@@ -1,0 +1,22 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TYPES OF CLASSES IN JAVA :
+Concrete Class
+Abstract Class
+Super Class and Sub Class
+Object Class
+Nested Class
+    Static Nested Class/ Static Class
+    Non-Static Nested Class/ Inner Class
+        Anonymous Inner Class
+        Member Inner Class
+        Local Inner Class
+Generic Class
+POJO Class
+Enum Class
+Final Class
+Singleton Class
+Immutable Class
+Wrapper Class0
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

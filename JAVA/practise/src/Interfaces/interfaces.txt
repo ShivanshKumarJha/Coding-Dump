@@ -1,0 +1,199 @@
+Interface is something which helps 2 system to interact with each other, without one system has to
+know the details of the other system. It is a contract between 2 systems, which defines the methods that
+one system can call on the other system. The system which implements the interface has to provide the
+implementation for all the methods defined in the interface.
+It helps to achieve ABSTRACTION
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Interface declaration consist of
+    Modifiers
+    "interface" keyword
+    Interface Name
+    Comma separated list of parent interfaces
+    Body
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Only Public and Default Modifiers are allowed(Protected and private are not allowed)
+public interface Bird{
+    public void fly();
+}
+
+interface Bird{
+    public void fly();
+}
+
+interface Bird{
+    public void fly();
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Comma separated list of parent interfaces(it can extend from Class)
+
+public interface NonFlyingBird extends Bird, Animal{
+    public void walk();
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Why we need interfaces?
+
+1. Using interface, we can achieve full Abstraction means, we can define WHAT class must do, but not HOW it will do
+public interface Bird(){
+    public void fly();
+}
+
+public class Eagle implements Bird{
+    @Override
+    public void fly(){
+        // the complex process of flying takes place here
+    }
+}
+
+2. Polymorphism
+public class Eagle implements Bird{
+    @Override
+    public void fly(){
+        System.out.println("Eagle");
+    }
+}
+
+public class Hen implements Bird{
+    @Override
+    public void fly(){
+        System.out.println("Hen");
+    }
+}
+
+public static void main(String[] args){
+    Bird bird = new Eagle();
+    bird.fly(); // Output: Eagle
+
+    bird = new Hen();
+    bird.fly(); // Output: Hen
+}
+
+3. Multiple Inheritance is possible only through interfaces
+public interface LandAnimal{
+    public boolean canBreathe();
+}
+
+public interface WaterAnimal{
+    public boolean canBreathe();
+}
+
+public class Crocodile implements LandAnimal, WaterAnimal{
+    @Override
+    public boolean canBreathe(){
+        // Crocodile can breathe both on land and in water
+        return true;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Methods in interfaces:
+    All methods are implicit public only.
+    Method can not be declared as final.
+
+public interface Bird{
+    void fly();
+    public void hasBreak();
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Fields in interfaces:
+    Fields are public, static and final by default.
+    We can not declare a field as private or protected.
+
+public interface Bird{
+    int WINGS = 2;
+}
+
+==
+
+public interface Bird{
+    public static final int WINGS = 2;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Interface implementation:
+    A class can implement an interface using "implements" keyword.
+    Overriding methods can not have more restrict access specifiers.
+    Concrete class must override all the methods declared in the interface.
+    Abstract classes are not forced to override all the methods.
+    A class can implement from multiple interfaces.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Nested Interface
+    Nested Interface declared within another interface
+    Nested interface declared within a class
+Generally it is used to group related interfaces together, and to provide a namespace for the nested interface.
+
+Rules:
+    A nested interface declared within an interface must be public
+    A nested interface declared within a class can have any access modifier.
+    When you implement outer interface, inner interface implementation is not required and vice versa.
+
+public interface Bird{
+    public void canFly();
+
+    public interface NoneFlyingBird{
+        public void canRun();
+    }
+}
+
+// Outer Implementation
+public class Eagle implements Bird{
+    @Override
+    public void canFly(){
+        System.out.println("Eagle can fly");
+    }
+}
+
+// Inner Implementation
+public class Eagle implements Bird.NonFlyingBird{
+    @Override
+    public void canRun(){
+        System.out.println("Eagle can run");
+    }
+}
+
+// Both
+public class Eagle implements Bird, Bird.NonFlyingBird{
+    @Override
+    public void canFly(){
+        System.out.println("Eagle can fly");
+    }
+
+    @Override
+    public void canRun(){
+        System.out.println("Eagle can run");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Interface within class
+
+public class Bird{
+    protected interface NonFlyingBird{
+        public void canRun();
+    }
+}
+
+public class Eagle implements Bird.NonFlyingBird{
+    @Override
+    public void canRun(){
+        System.out.println("Eagle can run");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Learn about interface v/s abstract class

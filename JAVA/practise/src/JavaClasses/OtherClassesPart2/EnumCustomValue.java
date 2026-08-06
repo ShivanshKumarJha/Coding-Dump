@@ -21,7 +21,12 @@ public enum EnumCustomValue {
         return comment;
     }
 
-    public static EnumCustomValue valueOf(int name) {
-        return EnumCustomValue.valueOf(name);
+    public static EnumCustomValue getEnumFromValue(int value) {
+        for (EnumCustomValue enumValue : EnumCustomValue.values()) {
+            if (enumValue.val == value) {
+                return enumValue;
+            }
+        }
+        return null;
     }
 }

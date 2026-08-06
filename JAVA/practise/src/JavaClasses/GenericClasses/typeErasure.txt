@@ -1,0 +1,19 @@
+Generic Class Erasure
+
+public class Print<T>{
+    T value;
+
+    public void setValue(T val){
+        this.value = val;
+    }
+}
+
+This will be converted in the below code
+
+public class Print{
+    Object value;
+
+    public void setValue(Object val){
+        this.value = val;
+    }
+}

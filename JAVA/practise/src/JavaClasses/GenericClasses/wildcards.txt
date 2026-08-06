@@ -1,0 +1,28 @@
+Upper Bounded wildcard : <? extends UpperBoundClassName> i.e. class Name and below  -> When you want to read values safely
+Lower Bounded wildcard : <? super LowerBoundClassName> i.e. class Name and above -> When you want to write/add values safely
+Unbounded wildcard : <?> only you can read
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+// wild card method
+public void computeList(List<? extends Number> source, List<? extends Number> destination) {
+
+}
+List<Integer> wildCardIntegerSourceList = new ArrayList<>();
+List<Float> wildCardFloatDestinationList = new ArrayList<>();
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+// generic type method
+public<T extends Number> void computeList(List<T> source, List<T> destination) {
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+/*
+    1. In wildcard, we can have the different types of source and destination list but in generic type method, we can have only the same type of source and destination list.
+    2. In wildcard, we can use super.
+*/
+
+-----------------------------------------------------------------------------------------------------------------------------

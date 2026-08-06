@@ -1,4 +1,4 @@
-package JavaClasses;
+package JavaClasses.NestedClasses;
 
 // Anonymous Class
 public abstract  class Car {

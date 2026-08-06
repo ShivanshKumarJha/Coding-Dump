@@ -1,4 +1,5 @@
 package JavaClasses.OtherClassesPart2;
 
-public class FinalClass {
+// Final class can not be inherited
+public final class FinalClass {
 }
