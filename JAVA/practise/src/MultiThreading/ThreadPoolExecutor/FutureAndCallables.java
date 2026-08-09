@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-public class FutureExample {
+public class FutureAndCallables {
 
     static void main(String[] args) {
 
@@ -20,7 +20,7 @@ public class FutureExample {
             return 123;
         });*/
 
-        // USE CASES FOR THE CALLABLE
+        // USE CASES FOR THE SUBMIT
         ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(
                 3, 3, 10, TimeUnit.MINUTES, new ArrayBlockingQueue<>(10), Executors.defaultThreadFactory(), new CustomRejectionHandler()
         );
