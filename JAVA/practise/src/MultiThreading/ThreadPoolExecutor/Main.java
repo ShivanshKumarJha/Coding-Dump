@@ -23,18 +23,6 @@ public class Main {
         }
 
         executor.shutdown();
-
-        // Futures and Callables
-        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(
-                1, 1, 10, TimeUnit.MINUTES, new ArrayBlockingQueue<>(2), Executors.defaultThreadFactory(), new CustomRejectionHandler()
-        );
-
-        Future<?> futureObj1 = poolExecutor.submit(() -> System.out.println("Do something in Future"));
-
-        Future<Integer> futureObj2 = poolExecutor.submit(() -> {
-            System.out.println("Do something in Future with return value");
-            return 123;
-        });
     }
 }
 
