@@ -1,3 +1,5 @@
+package JavaNewFeatures;
+
 public class switchExpression {
 
     static void main(String[] args) {

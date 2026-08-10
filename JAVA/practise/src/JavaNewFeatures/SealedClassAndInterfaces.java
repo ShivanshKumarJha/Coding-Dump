@@ -1,3 +1,5 @@
+package JavaNewFeatures;
+
 public class SealedClassAndInterfaces {
 
     static void main(String[] args) {

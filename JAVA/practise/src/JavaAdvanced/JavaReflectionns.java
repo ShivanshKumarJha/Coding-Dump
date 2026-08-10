@@ -1,3 +1,5 @@
+package JavaAdvanced;
+
 /*
 Java reflection is used to examine the classes, methods, fields, interfaces at runtime and also
 possible to change the behavior of the class
@@ -32,28 +34,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
 class JavaReflections {
-    static class Bird {}
-
-    static class Eagle{
-        Eagle(){}
-
-        public String breed;
-        private boolean canSwim;
-
-        public void fly(){
-            System.out.println("fly");
-        }
-
-        public void eat(){
-            System.out.println("eat");
-        }
-
-        public void fly(int intParam, boolean boolParam, String strParam){
-            System.out.println("fly intParam: " + intParam + " boolParam: " + boolParam + " strParam: " + strParam);
-        }
-    }
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // Ways to get the object of the class Class
 
         // First way
@@ -80,7 +61,7 @@ class JavaReflections {
 
         // Reflection of the methods
         Method[] methods = eagleClass.getMethods();    // All public methods it will return
-        for(Method method : methods){
+        for (Method method : methods) {
             System.out.println("Method Name: " + method.getName());
             System.out.println("Method Return Type: " + method.getReturnType());
             System.out.println("Method Modifiers: " + Modifier.toString(method.getModifiers()));
@@ -89,7 +70,7 @@ class JavaReflections {
         // For getting all methods including private methods for only the current class,
         // we can use getDeclaredMethods() method
         Method[] declaredMethods = eagleClass.getDeclaredMethods();
-        for(Method method : declaredMethods){
+        for (Method method : declaredMethods) {
             System.out.println("Method Name: " + method.getName());
             System.out.println("Method Return Type: " + method.getReturnType());
             System.out.println("Method Modifiers: " + Modifier.toString(method.getModifiers()));
@@ -113,7 +94,7 @@ class JavaReflections {
         try {
             Class eagleClass3 = Class.forName("Eagle");
             Field[] fields = eagleClass3.getFields();
-            for(Field field : fields){
+            for (Field field : fields) {
                 System.out.println("Field Name: " + field.getName());
                 System.out.println("Field Type: " + field.getType());
                 System.out.println("Field Modifiers: " + Modifier.toString(field.getModifiers()));
@@ -124,7 +105,7 @@ class JavaReflections {
 
 //      -----------------------------------------------------------------------------------------------------
         // Setting the value of field
-        try{
+        try {
             // Public field
             Class eagleClass4 = Eagle.class;
             Eagle eagleObj = new Eagle();
@@ -146,13 +127,35 @@ class JavaReflections {
         Class eagleClass5 = Eagle.class;
 
         Constructor[] eagleConstructorList = eagleClass5.getDeclaredConstructors();
-        for(Constructor constructor : eagleConstructorList){
-            System.out.println("Modifier: "+Modifier.toString(constructor.getModifiers()));
-            System.out.println("Constructor Name: "+constructor.getName());
+        for (Constructor constructor : eagleConstructorList) {
+            System.out.println("Modifier: " + Modifier.toString(constructor.getModifiers()));
+            System.out.println("Constructor Name: " + constructor.getName());
             Class[] parameterTypes = constructor.getParameterTypes();
-            for(Class parameterType : parameterTypes){
-                System.out.println("Parameter Type: "+parameterType.getName());
+            for (Class parameterType : parameterTypes) {
+                System.out.println("Parameter Type: " + parameterType.getName());
             }
+        }
+    }
+
+    static class Bird {
+    }
+
+    static class Eagle {
+        public String breed;
+        private boolean canSwim;
+        Eagle() {
+        }
+
+        public void fly() {
+            System.out.println("fly");
+        }
+
+        public void eat() {
+            System.out.println("eat");
+        }
+
+        public void fly(int intParam, boolean boolParam, String strParam) {
+            System.out.println("fly intParam: " + intParam + " boolParam: " + boolParam + " strParam: " + strParam);
         }
     }
 }

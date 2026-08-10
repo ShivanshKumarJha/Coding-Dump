@@ -1,3 +1,5 @@
+package JavaNewFeatures;
+
 public class instanceOfExample {
 
     static void main(String[] args) {

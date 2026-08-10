@@ -1,3 +1,4 @@
+package JavaAdvanced;
 /*
     Exceptions:
     1. It is an event that occurs during the execution of a program that disrupts the normal flow of instructions.
@@ -56,7 +57,7 @@ public class JavaExceptions {
     }
 
     public static void method1() {
-        try{
+        try {
             throw new ClassNotFoundException("Class not found exception");
         } catch (ClassNotFoundException e) {
             System.out.println("Exception caught: " + e.getMessage());

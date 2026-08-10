@@ -1,3 +1,5 @@
+package JavaNewFeatures;
+
 public class recordsExample {
 
     static void main(String[] args) {

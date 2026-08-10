@@ -1,3 +1,5 @@
+package JavaNewFeatures;
+
 public class patternMatchingForSwitchExample {
 
     static void main(String[] args) {

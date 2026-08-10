@@ -1,5 +1,6 @@
-/*
+package JavaAdvanced;
 
+/*
 1. Annotations in Java are a form of metadata that provide data about a program but are not part of the program itself.
 2. They have no direct effect on the operation of the code they annotate.
 3. Annotations can be used for various purposes, such as providing information to the compiler, generating code,
@@ -17,8 +18,6 @@ Type of annotations:
     b. Can be used to provide additional information about the code, which can be processed at compile-time or runtime.
 */
 
-import jdk.jfr.Category;
-
 import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -35,8 +34,8 @@ public class JavaAnnotations {
     What is Heap pollution(@SafeVarags helps to prevent this) ?
     Object of one type(example String) storing the reference of another type Object(Example Integer)
 */
-class Log{
-    public static void printLogValues(List<Integer>... logNumbersList){
+class Log {
+    public static void printLogValues(List<Integer>... logNumbersList) {
         Object[] objectsList = logNumbersList;
         List<String> stringValuesList = new ArrayList<>();
         stringValuesList.add("Hello");
@@ -48,7 +47,7 @@ class Log{
     // This annotation is used to indicate that the method does not perform potentially unsafe operations on its varargs parameter.
 
     @SafeVarargs
-    public static void printLogValuesSafe(List<Integer>... logNumbersList){
+    public static void printLogValuesSafe(List<Integer>... logNumbersList) {
         Object[] objectsList = logNumbersList;
         List<String> stringValuesList = new ArrayList<>();
         stringValuesList.add("Hello");
@@ -68,11 +67,12 @@ class Log{
         Category[] value();
     }
 
-    @Category(name="Shivansh")
-    @Category(name="Shiv")
-    @Category(name="Ansh")
-    public class Eagle{
-        public void fly(){}
+    @Category(name = "Shivansh")
+    @Category(name = "Shiv")
+    @Category(name = "Ansh")
+    public class Eagle {
+        public void fly() {
+        }
     }
 }
 
