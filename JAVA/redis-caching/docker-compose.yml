@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: redis_caching_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: demo_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345678
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis_caching_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: ["redis-server", "--appendonly", "yes"]
+
+volumes:
+  postgres-data:
+  redis-data:
